@@ -355,3 +355,5 @@ MigrationBackup/
 bin/Debug/netcoreapp3.1/config.json
 
 config.json
+
+Shiro-Sharp.csproj
