@@ -6,9 +6,9 @@ namespace Shiro_Sharp
     {
         static void Main(string[] args)
         {
-            var client = new Bot();
+            var bot = new Bot();
 
-            client.RunAsync().GetAwaiter().GetResult();
+            bot.RunAsync().GetAwaiter().GetResult();
         }
     }
 }
