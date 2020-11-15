@@ -42,7 +42,7 @@ namespace Shiro_Sharp
                 Token = configJson.Token,
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
-                LogLevel = LogLevel.Debug,
+                LogLevel = LogLevel.Info,
                 UseInternalLogHandler = true,
                 
             };
@@ -70,6 +70,7 @@ namespace Shiro_Sharp
 
             Commands.RegisterCommands<FunCommands>();
             Commands.RegisterCommands<MathCommands>();
+            Commands.RegisterCommands<OwnerCommands>();
 
             this.Commands.CommandErrored += this.Commands_CommandErrored;
             this.Client.ClientErrored += this.Client_ClientError;
@@ -81,6 +82,7 @@ namespace Shiro_Sharp
 
         private Task OnReady(ReadyEventArgs e)
         {
+            Console.WriteLine("Ready Freddy!");
             return Task.CompletedTask;
         }
 
